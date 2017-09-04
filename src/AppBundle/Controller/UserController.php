@@ -15,9 +15,17 @@ class UserController extends Controller
 
     public function loginAction()
     {
-        return $this->render('AppBundle:User:login.html.twig', array(
-            // ...
-        ));
+        if (isset($_SESSION['user_id'])) {
+            return $this->redirectToRoute('/');
+        }
+
+        if (!isset($_POST['username'])) {
+            return $this->render('AppBundle:User:login.html.twig');
+        }
+
+        session_start();
+//        $_SESSION['user_id'] = ;
+        return $this->redirectToRoute('/');
     }
 
 }
