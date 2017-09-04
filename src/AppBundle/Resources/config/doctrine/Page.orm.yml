@@ -1,0 +1,45 @@
+AppBundle\Entity\Page:
+    type: entity
+    table: page
+    indexes:
+        user_id:
+            columns:
+                - user_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        route:
+            type: string
+            nullable: false
+            length: 255
+            options:
+                fixed: false
+        content:
+            type: text
+            nullable: false
+            length: 65535
+            options:
+                fixed: false
+        createDate:
+            type: date
+            nullable: false
+            column: create_date
+    manyToOne:
+        user:
+            targetEntity: User
+            cascade: {  }
+            fetch: LAZY
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                user_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

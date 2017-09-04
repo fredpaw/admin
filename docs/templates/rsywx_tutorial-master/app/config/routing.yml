@@ -1,0 +1,3 @@
+rsywx:
+    resource: "@AppBundle/Resources/config/routing.yml"
+    

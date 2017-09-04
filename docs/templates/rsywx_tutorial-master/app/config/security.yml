@@ -1,0 +1,27 @@
+security:
+    encoders:
+        Symfony\Component\Security\Core\User\User: plaintext
+
+    providers:
+        in_memory:
+            memory:
+                users:
+                    admin: { password: 123456, roles: [ 'ROLE_ADMIN' ] }
+
+    firewalls:
+        dev:
+            pattern:  ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+
+        login:
+            pattern:  ^/demo/secured/login$
+            security: false
+
+        secured_area:
+            pattern:    ^/admin
+            anonymous: ~
+            http_basic:
+                realm: "Secured RSYWX Admin Area"
+
+    access_control:
+        - { path: ^/admin, roles: ROLE_ADMIN }

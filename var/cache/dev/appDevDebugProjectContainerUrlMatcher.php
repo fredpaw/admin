@@ -108,13 +108,23 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
         }
 
-        // homepage
+        // home
         if ('' === $trimmedPathinfo) {
             if (substr($pathinfo, -1) !== '/') {
-                return $this->redirect($pathinfo.'/', 'homepage');
+                return $this->redirect($pathinfo.'/', 'home');
             }
 
-            return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::indexAction',  '_route' => 'homepage',);
+            return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::indexAction',  '_route' => 'home',);
+        }
+
+        // index
+        if ('/user' === $pathinfo) {
+            return array (  '_controller' => 'AppBundle\\Controller\\UserController::indexAction',  '_route' => 'index',);
+        }
+
+        // login
+        if ('/login' === $pathinfo) {
+            return array (  '_controller' => 'AppBundle\\Controller\\UserController::loginAction',  '_route' => 'login',);
         }
 
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();
