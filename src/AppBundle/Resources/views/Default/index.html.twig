@@ -2,6 +2,8 @@
 
 {% block body %}
     <h1>This is Dashboard</h1>
+    {% set user_id = app.session.get('user_id') %}
+    <h3>{{  user_id  }}</h3>
 {% endblock %}
 
 {% block stylesheets %}

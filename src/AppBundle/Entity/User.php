@@ -2,28 +2,33 @@
 
 namespace AppBundle\Entity;
 
+use Symfony\Component\Validator\Constraints as Assert;
+
 /**
  * User
  */
 class User
 {
     /**
-     * @var integer
+     * @Assert\Type("\integer")
      */
     private $id;
 
     /**
-     * @var string
+     * @Assert\NotBlank
+     * @Assert\Type("\string")
      */
     private $username;
 
     /**
-     * @var string
+     * @Assert\NotBlank()
+     * @Assert\Type("\string")
      */
     private $password;
 
     /**
-     * @var \DateTime
+     * @Assert\NotBlank()
+     * @Assert\Type("\DateTime")
      */
     private $createdDate;
 
