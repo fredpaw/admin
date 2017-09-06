@@ -13,7 +13,7 @@ class UserType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('username')->add('password')->add('createdDate');
+        $builder->add('username')->add('password')->add('createdDate', NULL);
     }
     
     /**
@@ -31,7 +31,7 @@ class UserType extends AbstractType
      */
     public function getBlockPrefix()
     {
-        return 'appbundle_user';
+        return 'user_login';
     }
 
 
