@@ -2,7 +2,8 @@
 
 {% block title %}System Login{% endblock %}
 {% block stylesheets %}
-    <link href="css/signin.css" rel="stylesheet">
+    <link href="{{ asset('bundles/app/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('bundles/app/css/signin.css') }}" rel="stylesheet">
 {% endblock %}
 {% block body %}
     <div class="container">
@@ -23,4 +24,11 @@
 
         {{ form_end(form, {'render_rest':false}) }}
     </div>
+{% endblock %}
+{% block javascripts %}
+    <!-- Bootstrap core JavaScript
+            ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="{{ asset('bundles/app/js/ie10-viewport-bug-workaround.js') }}"></script>
 {% endblock %}
