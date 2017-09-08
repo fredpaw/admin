@@ -10,10 +10,11 @@ class DefaultController extends Controller
 {
     public function indexAction(Request $request)
     {
-        if (isset($_SESSION['user_id'])) {
-          return $this->render('AppBundle:default:index.html.twig');
-        } else {
-          return $this->redirectToRoute('login');
-        }
+//        if (isset($_SESSION['user_id'])) {
+//          return $this->render('AppBundle:default:index.html.twig');
+//        } else {
+//          return $this->redirectToRoute('login');
+//        }
+        return $this->render('AppBundle:default:index.html.twig');
     }
 }

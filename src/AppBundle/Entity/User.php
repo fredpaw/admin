@@ -10,24 +10,27 @@ use Symfony\Component\Validator\Constraints as Assert;
 class User
 {
     /**
-     * @Assert\Type("\integer")
+     * @var integer
+     * @Assert\Type("integer")
      */
     private $id;
 
     /**
+     * @var string
      * @Assert\NotBlank
-     * @Assert\Type("\string")
+     * @Assert\Type("string")
      */
     private $username;
 
     /**
+     * @var string
      * @Assert\NotBlank()
-     * @Assert\Type("\string")
+     * @Assert\Type("string")
      */
     private $password;
 
     /**
-     * @Assert\NotBlank()
+     * @var \DateTime
      * @Assert\Type("\DateTime")
      */
     private $createdDate;
