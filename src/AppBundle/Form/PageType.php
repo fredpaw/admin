@@ -13,7 +13,7 @@ class PageType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('route')->add('content')->add('createDate')->add('user');
+        $builder->add('route')->add('content');
     }
     
     /**

@@ -1,0 +1,26 @@
+{% extends "@App/default/index.html.twig" %}
+
+{% block title %}Change Password{% endblock %}
+{% block stylesheets %}
+    {{ parent() }}
+    <link href="{{ asset('bundles/app/css/signin.css') }}" rel="stylesheet">
+{% endblock %}
+{% block content %}
+    <div class="container">
+
+        {{ form_start(form, {'attr':{'class':'form-signin'}}) }}
+        <h3 class="form-signin-heading">Change Your Password</h3>
+        {% if (msg) %}
+            <p>Notice: {{ msg }}</p>
+        {% endif %}
+        {{ form_errors(form) }}
+        <p>Username: {{ app.session.get('user_name') }}</p>
+        {{ form_label(form.newPassword,'New Password') }}
+        {{ form_widget(form.newPassword, {'attr':{'class':'form-control', 'placeholder':'New Password'}}) }}
+        {{ form_label(form.confirmPassword,'Confirm Password') }}
+        {{ form_widget(form.confirmPassword, {'attr':{'class':'form-control', 'placeholder':'Confirm Password'}}) }}
+        {{ form_row(form.save, {'attr':{'class':'btn btn-lg btn-primary btn-block'}}) }}
+
+        {{ form_end(form) }}
+    </div>
+{% endblock %}

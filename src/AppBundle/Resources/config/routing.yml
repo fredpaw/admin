@@ -13,3 +13,23 @@ login:
 logout:
     path: /logout
     defaults: { _controller: AppBundle:User:logout }
+
+password:
+    path: /password_change
+    defaults: { _controller: AppBundle:User:change }
+
+list-article:
+    path:     /article-list
+    defaults: { _controller: AppBundle:Page:index }
+
+new-article:
+    path:     /new-article
+    defaults: { _controller: AppBundle:Page:new }
+
+edit-article:
+    path:     /edit-article
+    defaults: { _controller: AppBundle:Page:edit }
+
+delete-article:
+    path:     /delete-article
+    defaults: { _controller: AppBundle:Page:delete }

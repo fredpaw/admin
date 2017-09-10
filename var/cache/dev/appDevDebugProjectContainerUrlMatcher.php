@@ -132,6 +132,31 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
             return array (  '_controller' => 'AppBundle\\Controller\\UserController::logoutAction',  '_route' => 'logout',);
         }
 
+        // password
+        if ('/password_change' === $pathinfo) {
+            return array (  '_controller' => 'AppBundle\\Controller\\UserController::changeAction',  '_route' => 'password',);
+        }
+
+        // list-article
+        if ('/article-list' === $pathinfo) {
+            return array (  '_controller' => 'AppBundle\\Controller\\PageController::indexAction',  '_route' => 'list-article',);
+        }
+
+        // new-article
+        if ('/new-article' === $pathinfo) {
+            return array (  '_controller' => 'AppBundle\\Controller\\PageController::newAction',  '_route' => 'new-article',);
+        }
+
+        // edit-article
+        if ('/edit-article' === $pathinfo) {
+            return array (  '_controller' => 'AppBundle\\Controller\\PageController::editAction',  '_route' => 'edit-article',);
+        }
+
+        // delete-article
+        if ('/delete-article' === $pathinfo) {
+            return array (  '_controller' => 'AppBundle\\Controller\\PageController::deleteAction',  '_route' => 'delete-article',);
+        }
+
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();
     }
 }

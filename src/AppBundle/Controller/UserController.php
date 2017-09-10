@@ -23,9 +23,9 @@ class UserController extends Controller
 
     public function loginAction(Request $request)
     {
-//        if (isset($_SESSION['user_id'])) {
-//            return $this->redirectToRoute('/');
-//        }
+        if ($request->getSession()->get('user_id')) {
+            return $this->redirectToRoute('home');
+        }
 
         $user = new User();
         $form = $this->createFormBuilder($user)
@@ -57,9 +57,11 @@ class UserController extends Controller
                     'form' => $form->createView()
                 ));
             }
-//            session_start();
-//            $_SESSION['user_id'] = $admin->getId();
-            return $this->redirectToRoute('home');
+            if($admin->getPassword() == $user->getPassword() && $admin->getUserName() == $user->getUserName()) {
+                $request->getSession()->set('user_id', $admin->getId());
+                $request->getSession()->set('user_name', $admin->getUserName());
+                return $this->redirectToRoute('home');
+            }
         }
         return $this->render('AppBundle:User:login.html.twig', array(
             'form' => $form->createView()
@@ -69,7 +71,43 @@ class UserController extends Controller
     public function logoutAction()
     {
         session_destroy();
-        return $this->redirectToRoute('/login');
+        return $this->redirectToRoute('login');
+    }
+
+    public function changeAction(Request $request)
+    {
+        $session = $request->getSession();
+        if(!$session->get('user_id')) {
+            return $this->redirectToRoute('login');
+        }
+
+        $form = $this->createFormBuilder()
+            ->add('newPassword', PasswordType::class)
+            ->add('confirmPassword', PasswordType::class)
+            ->add('save', SubmitType::class, array('label' => 'Change Password'))
+            ->getForm();
+
+        $form->handleRequest($request);
+
+        $msg = '';
+        if($form->isSubmitted()) {
+            $data= $form->getData();
+            if(!$data['newPassword']) {
+                $form->addError(new FormError('Password can not be empty'));
+            } else if($data['newPassword'] != $data['confirmPassword']) {
+                $form->addError(new FormError('Password is not match'));
+            } else {
+                $em = $this->getDoctrine()->getManager();
+                $user = $em->getRepository('AppBundle:User')->find($session->get('user_id'));
+                $user->setPassword($data['newPassword']);
+                $em->flush();
+                $msg = 'Your Password is updated';
+            }
+        }
+        return $this->render('AppBundle:User:change.html.twig', array(
+            'form' => $form->createView(),
+            'msg' => $msg
+        ));
     }
 
 }
