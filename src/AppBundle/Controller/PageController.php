@@ -7,6 +7,7 @@ use AppBundle\Form\PageType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\HttpFoundation\Request;
+use Doctrine\ORM\EntityManagerInterface;
 
 class PageController extends Controller
 {
@@ -17,18 +18,47 @@ class PageController extends Controller
         ));
     }
 
+    public function newAction(Request $request, $id = null)
+    {
+        if(!$request->getSession()->get('user_id')){
+            return $this->redirectToRoute('login');
+        }
+
+        $article = new Page();
+        $form = $this->createForm(PageType::class, $article);
+        $form->add('save', SubmitType::class);
+
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $article = $form->getData();
+            $em = $this->getDoctrine()->getManager();
+
+            $user = $em->getRepository('AppBundle:User')->find($request->getSession()->get('user_id'));
+            $article->setUser($user);
+            $article->setCreateDate(new \DateTime('now', new \DateTimeZone('Australia/Sydney')));
+            $em->persist($article);
+            $em->flush();
+
+            $articles = $this->getDoctrine()->getRepository(Page::class)->findBy(array('route' => $article->getRoute()), array('id' => 'DESC'));
+
+            $id = $articles[0]->getId();
+
+            return $this->redirectToRoute('edit-article', array('id' => $id));
+        }
+
+        return $this->render('AppBundle:Page:edit.html.twig', array(
+            'form' => $form->createView()
+        ));
+    }
+
     public function editAction(Request $request, $id)
     {
         if(!$request->getSession()->get('user_id')){
             return $this->redirectToRoute('login');
         }
 
-        if(!$id) {
-            $article = new Page();
-        } else {
-            $article = $this->getDoctrine()->getRepository('AppBundle/Page')->find($id);
-        }
-
+        $article = $this->getDoctrine()->getRepository('AppBundle:Page')->find($id);
 
         $form = $this->createForm(PageType::class, $article);
         $form->add('save', SubmitType::class);
@@ -36,25 +66,10 @@ class PageController extends Controller
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $page = $form->getData();
             $em = $this->getDoctrine()->getManager();
 
-            if(!$id) {
-                $user = $em->getRepository('AppBundle:User')->find($request->getSession()->get('user_id'));
-                $page->setUser($user);
-                $page->setCreateDate(new \DateTime('now', new \DateTimeZone('Australia/Sydney')));
-                $em->persist($page);
-                $em->flush();
-                $article = $this->getDoctrine()->getRepository('AppBundle/Page')->findOneBy(array('id' => 'DESC'));
-                $id = $article->getId();
-                return $this->redirectToRoute($this->generateUrl(
-                    'edit-article',
-                    array('id' => $id)
-                ));
-            } else {
-                //update the article
-            }
-
+            //update the article
+            $em->flush();
         }
 
         return $this->render('AppBundle:Page:edit.html.twig', array(

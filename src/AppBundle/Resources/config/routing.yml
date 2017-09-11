@@ -15,15 +15,19 @@ password:
     defaults: { _controller: AppBundle:User:change }
 
 list-article:
-    path:     /article-list
+    path:     /article/list
     defaults: { _controller: AppBundle:Page:index }
 
 edit-article:
-    path:     /edit-article/{id}
+    path:     /article/edit/{id}
     defaults: { _controller: AppBundle:Page:edit }
     requirements:
-        page: '\d*'
+        page: '\d+'
+
+new-article:
+    path:     /article/new
+    defaults: { _controller: AppBundle:Page:new }
 
 delete-article:
-    path:     /delete-article
+    path:     /article/delete
     defaults: { _controller: AppBundle:Page:delete }

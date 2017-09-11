@@ -132,19 +132,27 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
             return array (  '_controller' => 'AppBundle\\Controller\\UserController::changeAction',  '_route' => 'password',);
         }
 
-        // list-article
-        if ('/article-list' === $pathinfo) {
-            return array (  '_controller' => 'AppBundle\\Controller\\PageController::indexAction',  '_route' => 'list-article',);
-        }
+        if (0 === strpos($pathinfo, '/article')) {
+            // list-article
+            if ('/article/list' === $pathinfo) {
+                return array (  '_controller' => 'AppBundle\\Controller\\PageController::indexAction',  '_route' => 'list-article',);
+            }
 
-        // edit-article
-        if ('/edit-article' === $pathinfo) {
-            return array (  '_controller' => 'AppBundle\\Controller\\PageController::editAction',  '_route' => 'edit-article',);
-        }
+            // edit-article
+            if (0 === strpos($pathinfo, '/article/edit') && preg_match('#^/article/edit/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'edit-article')), array (  '_controller' => 'AppBundle\\Controller\\PageController::editAction',));
+            }
 
-        // delete-article
-        if ('/delete-article' === $pathinfo) {
-            return array (  '_controller' => 'AppBundle\\Controller\\PageController::deleteAction',  '_route' => 'delete-article',);
+            // new-article
+            if ('/article/new' === $pathinfo) {
+                return array (  '_controller' => 'AppBundle\\Controller\\PageController::newAction',  '_route' => 'new-article',);
+            }
+
+            // delete-article
+            if ('/article/delete' === $pathinfo) {
+                return array (  '_controller' => 'AppBundle\\Controller\\PageController::deleteAction',  '_route' => 'delete-article',);
+            }
+
         }
 
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();

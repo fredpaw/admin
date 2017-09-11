@@ -37,7 +37,7 @@ class Page
 
     /**
      * @var \AppBundle\Entity\User
-     * @Assert\Type("AppBundle\User")
+     *
      */
     private $user;
 
