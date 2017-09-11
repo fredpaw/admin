@@ -2,10 +2,6 @@ home:
   path: /
   defaults: {_controller: AppBundle:Default:index }
 
-index:
-    path: /user
-    defaults: { _controller: AppBundle:User:index }
-
 login:
     path: /login
     defaults: { _controller: AppBundle:User:login }
@@ -22,13 +18,11 @@ list-article:
     path:     /article-list
     defaults: { _controller: AppBundle:Page:index }
 
-new-article:
-    path:     /new-article
-    defaults: { _controller: AppBundle:Page:new }
-
 edit-article:
-    path:     /edit-article
+    path:     /edit-article/{id}
     defaults: { _controller: AppBundle:Page:edit }
+    requirements:
+        page: '\d*'
 
 delete-article:
     path:     /delete-article

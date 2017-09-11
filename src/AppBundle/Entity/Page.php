@@ -2,6 +2,8 @@
 
 namespace AppBundle\Entity;
 
+use Symfony\Component\Validator\Constraints as Assert;
+
 /**
  * Page
  */
@@ -9,26 +11,33 @@ class Page
 {
     /**
      * @var integer
+     * @Assert\Type("integer")
      */
     private $id;
 
     /**
      * @var string
+     * @Assert\Type("string")
+     * @Assert\NotBlank()
      */
     private $route;
 
     /**
      * @var string
+     * @Assert\Type("string")
+     * @Assert\NotBlank()
      */
     private $content;
 
     /**
      * @var \DateTime
+     * @Assert\Type("\DateTime")
      */
     private $createDate;
 
     /**
      * @var \AppBundle\Entity\User
+     * @Assert\Type("AppBundle\User")
      */
     private $user;
 

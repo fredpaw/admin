@@ -117,11 +117,6 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
             return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::indexAction',  '_route' => 'home',);
         }
 
-        // index
-        if ('/user' === $pathinfo) {
-            return array (  '_controller' => 'AppBundle\\Controller\\UserController::indexAction',  '_route' => 'index',);
-        }
-
         // login
         if ('/login' === $pathinfo) {
             return array (  '_controller' => 'AppBundle\\Controller\\UserController::loginAction',  '_route' => 'login',);
@@ -140,11 +135,6 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
         // list-article
         if ('/article-list' === $pathinfo) {
             return array (  '_controller' => 'AppBundle\\Controller\\PageController::indexAction',  '_route' => 'list-article',);
-        }
-
-        // new-article
-        if ('/new-article' === $pathinfo) {
-            return array (  '_controller' => 'AppBundle\\Controller\\PageController::newAction',  '_route' => 'new-article',);
         }
 
         // edit-article

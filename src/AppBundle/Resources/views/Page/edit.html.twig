@@ -1,7 +1,27 @@
-{% extends "::base.html.twig" %}
+{% extends "@App/default/index.html.twig" %}
 
-{% block title %}AppBundle:Page:edit{% endblock %}
-
-{% block body %}
-<h1>Welcome to the Page:edit page</h1>
+{% block title %}Edit Article{% endblock %}
+{% block stylesheets %}
+    {{ parent() }}
+    <link href="{{ asset('bundles/app/css/signin.css') }}" rel="stylesheet">
 {% endblock %}
+{% block content %}
+    <div class="container">
+
+        {{ form_start(form) }}
+        <div class="form-group">
+            {{ form_errors(form) }}
+        </div>
+        <div class="form-group">
+            {{ form_label(form.route) }}
+            {{ form_widget(form.route, {'attr': {'class':'form-control', 'placeholder':'Please enter route for the page'}}) }}
+        </div>
+        <div class="form-group">
+            {{ form_label(form.content) }}
+            {{ form_widget(form.content, {'attr': {'class':'form-control', 'placeholder':'Please enter content for the page','rows':'30'}}) }}
+        </div>
+        {{ form_widget(form.save) }}
+        {{ form_end(form) }}
+    </div>
+{% endblock %}
+

@@ -17,36 +17,48 @@ class PageController extends Controller
         ));
     }
 
-    public function newAction(Request $request)
+    public function editAction(Request $request, $id)
     {
         if(!$request->getSession()->get('user_id')){
             return $this->redirectToRoute('login');
         }
 
-        $article = new Page();
+        if(!$id) {
+            $article = new Page();
+        } else {
+            $article = $this->getDoctrine()->getRepository('AppBundle/Page')->find($id);
+        }
+
 
         $form = $this->createForm(PageType::class, $article);
-        $form->add('submit', SubmitType::class);
+        $form->add('save', SubmitType::class);
+
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
             $page = $form->getData();
-        } else {
             $em = $this->getDoctrine()->getManager();
-            $user = $em->getRepository('AppBundle:User')->find($request->getSession()->get('user_id'));
-            $article->setUser($user);
-            $article->setCreateDate(new \DateTime('now', new \DateTimeZone('Australia/Sydney')));
+
+            if(!$id) {
+                $user = $em->getRepository('AppBundle:User')->find($request->getSession()->get('user_id'));
+                $page->setUser($user);
+                $page->setCreateDate(new \DateTime('now', new \DateTimeZone('Australia/Sydney')));
+                $em->persist($page);
+                $em->flush();
+                $article = $this->getDoctrine()->getRepository('AppBundle/Page')->findOneBy(array('id' => 'DESC'));
+                $id = $article->getId();
+                return $this->redirectToRoute($this->generateUrl(
+                    'edit-article',
+                    array('id' => $id)
+                ));
+            } else {
+                //update the article
+            }
+
         }
 
-        return $this->render('AppBundle:Page:new.html.twig', array(
-            'form' => $form->createView()
-        ));
-    }
-
-    public function editAction()
-    {
         return $this->render('AppBundle:Page:edit.html.twig', array(
-            // ...
+            'form' => $form->createView()
         ));
     }
 
