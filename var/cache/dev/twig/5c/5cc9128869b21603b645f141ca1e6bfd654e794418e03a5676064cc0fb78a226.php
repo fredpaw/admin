@@ -25,47 +25,47 @@ class __TwigTemplate_9abeb2b5168e44668ad7ac38d6fa8be5b8dc2e69bf17ef78daf225fc53c
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_83af3b5f8b6c8fc0b37444e284d495ea21c93d51d267f3e5964bf877bf1c2730 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_83af3b5f8b6c8fc0b37444e284d495ea21c93d51d267f3e5964bf877bf1c2730->enter($__internal_83af3b5f8b6c8fc0b37444e284d495ea21c93d51d267f3e5964bf877bf1c2730_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "AppBundle:default:index.html.twig"));
+        $__internal_ec1dceed91c18fad37983ffa46edd974403cfb8965f0e8c361a15ee751371407 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_ec1dceed91c18fad37983ffa46edd974403cfb8965f0e8c361a15ee751371407->enter($__internal_ec1dceed91c18fad37983ffa46edd974403cfb8965f0e8c361a15ee751371407_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "AppBundle:default:index.html.twig"));
 
-        $__internal_5b39a4599a93a55e95bc1e4631616ebcba5de1bb581e3d5a4d4cfaf4cd13b9bb = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_5b39a4599a93a55e95bc1e4631616ebcba5de1bb581e3d5a4d4cfaf4cd13b9bb->enter($__internal_5b39a4599a93a55e95bc1e4631616ebcba5de1bb581e3d5a4d4cfaf4cd13b9bb_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "AppBundle:default:index.html.twig"));
+        $__internal_670bf1836a2216d2efe993ce216653a89a27fe73e393cf4ee4001edd1016f311 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_670bf1836a2216d2efe993ce216653a89a27fe73e393cf4ee4001edd1016f311->enter($__internal_670bf1836a2216d2efe993ce216653a89a27fe73e393cf4ee4001edd1016f311_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "AppBundle:default:index.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_83af3b5f8b6c8fc0b37444e284d495ea21c93d51d267f3e5964bf877bf1c2730->leave($__internal_83af3b5f8b6c8fc0b37444e284d495ea21c93d51d267f3e5964bf877bf1c2730_prof);
+        $__internal_ec1dceed91c18fad37983ffa46edd974403cfb8965f0e8c361a15ee751371407->leave($__internal_ec1dceed91c18fad37983ffa46edd974403cfb8965f0e8c361a15ee751371407_prof);
 
         
-        $__internal_5b39a4599a93a55e95bc1e4631616ebcba5de1bb581e3d5a4d4cfaf4cd13b9bb->leave($__internal_5b39a4599a93a55e95bc1e4631616ebcba5de1bb581e3d5a4d4cfaf4cd13b9bb_prof);
+        $__internal_670bf1836a2216d2efe993ce216653a89a27fe73e393cf4ee4001edd1016f311->leave($__internal_670bf1836a2216d2efe993ce216653a89a27fe73e393cf4ee4001edd1016f311_prof);
 
     }
 
     // line 3
     public function block_title($context, array $blocks = array())
     {
-        $__internal_e00cbec66e6b19d35a9b1aa788c0778d2f1693949778c5a771c26605ee207204 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_e00cbec66e6b19d35a9b1aa788c0778d2f1693949778c5a771c26605ee207204->enter($__internal_e00cbec66e6b19d35a9b1aa788c0778d2f1693949778c5a771c26605ee207204_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_eacc7c67f687d8966c29c3b3dbc9caf0a4a5b0fa7009486488e2a5c73712c4c8 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_eacc7c67f687d8966c29c3b3dbc9caf0a4a5b0fa7009486488e2a5c73712c4c8->enter($__internal_eacc7c67f687d8966c29c3b3dbc9caf0a4a5b0fa7009486488e2a5c73712c4c8_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
-        $__internal_7db25576986b3c5a64b9fdc27d60d3b171f89c539dd19f4511c21a5628054c3c = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_7db25576986b3c5a64b9fdc27d60d3b171f89c539dd19f4511c21a5628054c3c->enter($__internal_7db25576986b3c5a64b9fdc27d60d3b171f89c539dd19f4511c21a5628054c3c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_2f44efef61ad21366a1d3566089c486b6fa4b5019535211767e9b1ce19655aeb = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_2f44efef61ad21366a1d3566089c486b6fa4b5019535211767e9b1ce19655aeb->enter($__internal_2f44efef61ad21366a1d3566089c486b6fa4b5019535211767e9b1ce19655aeb_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
         echo "Dashboard";
         
-        $__internal_7db25576986b3c5a64b9fdc27d60d3b171f89c539dd19f4511c21a5628054c3c->leave($__internal_7db25576986b3c5a64b9fdc27d60d3b171f89c539dd19f4511c21a5628054c3c_prof);
+        $__internal_2f44efef61ad21366a1d3566089c486b6fa4b5019535211767e9b1ce19655aeb->leave($__internal_2f44efef61ad21366a1d3566089c486b6fa4b5019535211767e9b1ce19655aeb_prof);
 
         
-        $__internal_e00cbec66e6b19d35a9b1aa788c0778d2f1693949778c5a771c26605ee207204->leave($__internal_e00cbec66e6b19d35a9b1aa788c0778d2f1693949778c5a771c26605ee207204_prof);
+        $__internal_eacc7c67f687d8966c29c3b3dbc9caf0a4a5b0fa7009486488e2a5c73712c4c8->leave($__internal_eacc7c67f687d8966c29c3b3dbc9caf0a4a5b0fa7009486488e2a5c73712c4c8_prof);
 
     }
 
     // line 4
     public function block_stylesheets($context, array $blocks = array())
     {
-        $__internal_dd16d0a8159c79fd2729d183f06ef145a504d702dfd54143bb544f7b40bb8f8e = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_dd16d0a8159c79fd2729d183f06ef145a504d702dfd54143bb544f7b40bb8f8e->enter($__internal_dd16d0a8159c79fd2729d183f06ef145a504d702dfd54143bb544f7b40bb8f8e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+        $__internal_d38d32cef3902baea1edbbc0af0f26d967e7467c010541abfcb895d33a0b7bc0 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_d38d32cef3902baea1edbbc0af0f26d967e7467c010541abfcb895d33a0b7bc0->enter($__internal_d38d32cef3902baea1edbbc0af0f26d967e7467c010541abfcb895d33a0b7bc0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
-        $__internal_9139c37d27e7b5c3624fc0e36f5b3c25062d01f56674799aed94ae36547784a6 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_9139c37d27e7b5c3624fc0e36f5b3c25062d01f56674799aed94ae36547784a6->enter($__internal_9139c37d27e7b5c3624fc0e36f5b3c25062d01f56674799aed94ae36547784a6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+        $__internal_3e98df4d62734c0cd325498c6f4586e2bbb00016530e45459063af7c504c22c3 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_3e98df4d62734c0cd325498c6f4586e2bbb00016530e45459063af7c504c22c3->enter($__internal_3e98df4d62734c0cd325498c6f4586e2bbb00016530e45459063af7c504c22c3_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
         // line 5
         echo "    <link href=\"";
@@ -77,21 +77,21 @@ class __TwigTemplate_9abeb2b5168e44668ad7ac38d6fa8be5b8dc2e69bf17ef78daf225fc53c
         echo "\" rel=\"stylesheet\">
 ";
         
-        $__internal_9139c37d27e7b5c3624fc0e36f5b3c25062d01f56674799aed94ae36547784a6->leave($__internal_9139c37d27e7b5c3624fc0e36f5b3c25062d01f56674799aed94ae36547784a6_prof);
+        $__internal_3e98df4d62734c0cd325498c6f4586e2bbb00016530e45459063af7c504c22c3->leave($__internal_3e98df4d62734c0cd325498c6f4586e2bbb00016530e45459063af7c504c22c3_prof);
 
         
-        $__internal_dd16d0a8159c79fd2729d183f06ef145a504d702dfd54143bb544f7b40bb8f8e->leave($__internal_dd16d0a8159c79fd2729d183f06ef145a504d702dfd54143bb544f7b40bb8f8e_prof);
+        $__internal_d38d32cef3902baea1edbbc0af0f26d967e7467c010541abfcb895d33a0b7bc0->leave($__internal_d38d32cef3902baea1edbbc0af0f26d967e7467c010541abfcb895d33a0b7bc0_prof);
 
     }
 
     // line 8
     public function block_body($context, array $blocks = array())
     {
-        $__internal_b2c85e113ce76414b06dd67734b7611cc67f103a68cd68ef28be230fc0e855d1 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_b2c85e113ce76414b06dd67734b7611cc67f103a68cd68ef28be230fc0e855d1->enter($__internal_b2c85e113ce76414b06dd67734b7611cc67f103a68cd68ef28be230fc0e855d1_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_a3aac77d1e89be06a329f3b6d61699b4169599db057b79ef06f21513607a442c = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_a3aac77d1e89be06a329f3b6d61699b4169599db057b79ef06f21513607a442c->enter($__internal_a3aac77d1e89be06a329f3b6d61699b4169599db057b79ef06f21513607a442c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
-        $__internal_7e912af830d33d2f5cb13684c10da5d649d010a08a3765cbadc471cbc17aa726 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_7e912af830d33d2f5cb13684c10da5d649d010a08a3765cbadc471cbc17aa726->enter($__internal_7e912af830d33d2f5cb13684c10da5d649d010a08a3765cbadc471cbc17aa726_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_4d0c41825a2654a6272bd707b894c6248efc1df5c6098e72a37fe70413bc61aa = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_4d0c41825a2654a6272bd707b894c6248efc1df5c6098e72a37fe70413bc61aa->enter($__internal_4d0c41825a2654a6272bd707b894c6248efc1df5c6098e72a37fe70413bc61aa_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 9
         echo "    <nav class=\"navbar navbar-expand-md navbar-dark fixed-top bg-dark\">
@@ -153,7 +153,10 @@ class __TwigTemplate_9abeb2b5168e44668ad7ac38d6fa8be5b8dc2e69bf17ef78daf225fc53c
         echo "\">New Article</a>
                     </li>
                     <li class=\"nav-item\">
-                        <a class=\"nav-link\" href=\"#\">Article List</a>
+                        <a class=\"nav-link\" href=\"";
+        // line 48
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("list-article");
+        echo "\">Article List</a>
                     </li>
                 </ul>
             </nav>
@@ -162,64 +165,50 @@ class __TwigTemplate_9abeb2b5168e44668ad7ac38d6fa8be5b8dc2e69bf17ef78daf225fc53c
                 ";
         // line 54
         $this->displayBlock('content', $context, $blocks);
-        // line 209
+        // line 88
         echo "            </main>
         </div>
     </div>
 ";
         
-        $__internal_7e912af830d33d2f5cb13684c10da5d649d010a08a3765cbadc471cbc17aa726->leave($__internal_7e912af830d33d2f5cb13684c10da5d649d010a08a3765cbadc471cbc17aa726_prof);
+        $__internal_4d0c41825a2654a6272bd707b894c6248efc1df5c6098e72a37fe70413bc61aa->leave($__internal_4d0c41825a2654a6272bd707b894c6248efc1df5c6098e72a37fe70413bc61aa_prof);
 
         
-        $__internal_b2c85e113ce76414b06dd67734b7611cc67f103a68cd68ef28be230fc0e855d1->leave($__internal_b2c85e113ce76414b06dd67734b7611cc67f103a68cd68ef28be230fc0e855d1_prof);
+        $__internal_a3aac77d1e89be06a329f3b6d61699b4169599db057b79ef06f21513607a442c->leave($__internal_a3aac77d1e89be06a329f3b6d61699b4169599db057b79ef06f21513607a442c_prof);
 
     }
 
     // line 54
     public function block_content($context, array $blocks = array())
     {
-        $__internal_2d8a506e8389c1168b2d0ce614c2c737670864cf4143f6a6155acbd34c45bc4a = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_2d8a506e8389c1168b2d0ce614c2c737670864cf4143f6a6155acbd34c45bc4a->enter($__internal_2d8a506e8389c1168b2d0ce614c2c737670864cf4143f6a6155acbd34c45bc4a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_64bb2de9ac13bef447a0040c82d5139eb0127ba1e0d33d2c3011904524b37869 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_64bb2de9ac13bef447a0040c82d5139eb0127ba1e0d33d2c3011904524b37869->enter($__internal_64bb2de9ac13bef447a0040c82d5139eb0127ba1e0d33d2c3011904524b37869_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
-        $__internal_43085d10f1172d4c7d5b2342c0d5acde3ceb89bd84e6cd6e65b0324ee2eb63ec = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_43085d10f1172d4c7d5b2342c0d5acde3ceb89bd84e6cd6e65b0324ee2eb63ec->enter($__internal_43085d10f1172d4c7d5b2342c0d5acde3ceb89bd84e6cd6e65b0324ee2eb63ec_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
+        $__internal_977edc79f7871c5f559660981eb1a5021beadcff9ad96d1447d0496929ae7087 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_977edc79f7871c5f559660981eb1a5021beadcff9ad96d1447d0496929ae7087->enter($__internal_977edc79f7871c5f559660981eb1a5021beadcff9ad96d1447d0496929ae7087_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "content"));
 
         // line 55
         echo "                <h1>Dashboard</h1>
 
                 <section class=\"row text-center placeholders\">
-                    <div class=\"col-6 col-sm-3 placeholder\">
+                    <div class=\"col-12 col-sm-6 placeholder\">
                         <img src=\"data:image/gif;base64,R0lGODlhAQABAIABAAJ12AAAACwAAAAAAQABAAACAkQBADs=\" width=\"200\" height=\"200\" class=\"img-fluid rounded-circle\" alt=\"Generic placeholder thumbnail\">
-                        <h4>Label</h4>
-                        <div class=\"text-muted\">Something else</div>
+                        <h4>Articles</h4>
                     </div>
-                    <div class=\"col-6 col-sm-3 placeholder\">
+                    <div class=\"col-12 col-sm-6 placeholder\">
                         <img src=\"data:image/gif;base64,R0lGODlhAQABAIABAADcgwAAACwAAAAAAQABAAACAkQBADs=\" width=\"200\" height=\"200\" class=\"img-fluid rounded-circle\" alt=\"Generic placeholder thumbnail\">
-                        <h4>Label</h4>
-                        <span class=\"text-muted\">Something else</span>
-                    </div>
-                    <div class=\"col-6 col-sm-3 placeholder\">
-                        <img src=\"data:image/gif;base64,R0lGODlhAQABAIABAAJ12AAAACwAAAAAAQABAAACAkQBADs=\" width=\"200\" height=\"200\" class=\"img-fluid rounded-circle\" alt=\"Generic placeholder thumbnail\">
-                        <h4>Label</h4>
-                        <span class=\"text-muted\">Something else</span>
-                    </div>
-                    <div class=\"col-6 col-sm-3 placeholder\">
-                        <img src=\"data:image/gif;base64,R0lGODlhAQABAIABAADcgwAAACwAAAAAAQABAAACAkQBADs=\" width=\"200\" height=\"200\" class=\"img-fluid rounded-circle\" alt=\"Generic placeholder thumbnail\">
-                        <h4>Label</h4>
-                        <span class=\"text-muted\">Something else</span>
+                        <h4>Users</h4>
                     </div>
                 </section>
 
-                <h2>Section title</h2>
+                <h2>Summary</h2>
                 <div class=\"table-responsive\">
                     <table class=\"table table-striped\">
                         <thead>
                         <tr>
                             <th>#</th>
-                            <th>Header</th>
-                            <th>Header</th>
-                            <th>Header</th>
-                            <th>Header</th>
+                            <th>Name</th>
+                            <th>Total</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -227,162 +216,55 @@ class __TwigTemplate_9abeb2b5168e44668ad7ac38d6fa8be5b8dc2e69bf17ef78daf225fc53c
                             <td>1,001</td>
                             <td>Lorem</td>
                             <td>ipsum</td>
-                            <td>dolor</td>
-                            <td>sit</td>
-                        </tr>
-                        <tr>
-                            <td>1,002</td>
-                            <td>amet</td>
-                            <td>consectetur</td>
-                            <td>adipiscing</td>
-                            <td>elit</td>
-                        </tr>
-                        <tr>
-                            <td>1,003</td>
-                            <td>Integer</td>
-                            <td>nec</td>
-                            <td>odio</td>
-                            <td>Praesent</td>
-                        </tr>
-                        <tr>
-                            <td>1,003</td>
-                            <td>libero</td>
-                            <td>Sed</td>
-                            <td>cursus</td>
-                            <td>ante</td>
-                        </tr>
-                        <tr>
-                            <td>1,004</td>
-                            <td>dapibus</td>
-                            <td>diam</td>
-                            <td>Sed</td>
-                            <td>nisi</td>
-                        </tr>
-                        <tr>
-                            <td>1,005</td>
-                            <td>Nulla</td>
-                            <td>quis</td>
-                            <td>sem</td>
-                            <td>at</td>
-                        </tr>
-                        <tr>
-                            <td>1,006</td>
-                            <td>nibh</td>
-                            <td>elementum</td>
-                            <td>imperdiet</td>
-                            <td>Duis</td>
-                        </tr>
-                        <tr>
-                            <td>1,007</td>
-                            <td>sagittis</td>
-                            <td>ipsum</td>
-                            <td>Praesent</td>
-                            <td>mauris</td>
-                        </tr>
-                        <tr>
-                            <td>1,008</td>
-                            <td>Fusce</td>
-                            <td>nec</td>
-                            <td>tellus</td>
-                            <td>sed</td>
-                        </tr>
-                        <tr>
-                            <td>1,009</td>
-                            <td>augue</td>
-                            <td>semper</td>
-                            <td>porta</td>
-                            <td>Mauris</td>
-                        </tr>
-                        <tr>
-                            <td>1,010</td>
-                            <td>massa</td>
-                            <td>Vestibulum</td>
-                            <td>lacinia</td>
-                            <td>arcu</td>
-                        </tr>
-                        <tr>
-                            <td>1,011</td>
-                            <td>eget</td>
-                            <td>nulla</td>
-                            <td>Class</td>
-                            <td>aptent</td>
-                        </tr>
-                        <tr>
-                            <td>1,012</td>
-                            <td>taciti</td>
-                            <td>sociosqu</td>
-                            <td>ad</td>
-                            <td>litora</td>
-                        </tr>
-                        <tr>
-                            <td>1,013</td>
-                            <td>torquent</td>
-                            <td>per</td>
-                            <td>conubia</td>
-                            <td>nostra</td>
-                        </tr>
-                        <tr>
-                            <td>1,014</td>
-                            <td>per</td>
-                            <td>inceptos</td>
-                            <td>himenaeos</td>
-                            <td>Curabitur</td>
-                        </tr>
-                        <tr>
-                            <td>1,015</td>
-                            <td>sodales</td>
-                            <td>ligula</td>
-                            <td>in</td>
-                            <td>libero</td>
                         </tr>
                         </tbody>
                     </table>
                 </div>
                 ";
         
-        $__internal_43085d10f1172d4c7d5b2342c0d5acde3ceb89bd84e6cd6e65b0324ee2eb63ec->leave($__internal_43085d10f1172d4c7d5b2342c0d5acde3ceb89bd84e6cd6e65b0324ee2eb63ec_prof);
+        $__internal_977edc79f7871c5f559660981eb1a5021beadcff9ad96d1447d0496929ae7087->leave($__internal_977edc79f7871c5f559660981eb1a5021beadcff9ad96d1447d0496929ae7087_prof);
 
         
-        $__internal_2d8a506e8389c1168b2d0ce614c2c737670864cf4143f6a6155acbd34c45bc4a->leave($__internal_2d8a506e8389c1168b2d0ce614c2c737670864cf4143f6a6155acbd34c45bc4a_prof);
+        $__internal_64bb2de9ac13bef447a0040c82d5139eb0127ba1e0d33d2c3011904524b37869->leave($__internal_64bb2de9ac13bef447a0040c82d5139eb0127ba1e0d33d2c3011904524b37869_prof);
 
     }
 
-    // line 213
+    // line 92
     public function block_javascripts($context, array $blocks = array())
     {
-        $__internal_9a79c928b1d3725c23d830c98dc1efd1fd05fe9ce9fb2ca5c51466024a453f7d = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_9a79c928b1d3725c23d830c98dc1efd1fd05fe9ce9fb2ca5c51466024a453f7d->enter($__internal_9a79c928b1d3725c23d830c98dc1efd1fd05fe9ce9fb2ca5c51466024a453f7d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_1e8dec43a14499f8aa7dd2c9c5bc7164afa92db388ab802ce32ffa61c54c7859 = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_1e8dec43a14499f8aa7dd2c9c5bc7164afa92db388ab802ce32ffa61c54c7859->enter($__internal_1e8dec43a14499f8aa7dd2c9c5bc7164afa92db388ab802ce32ffa61c54c7859_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        $__internal_8b506d23d4071c32cc04a0b8b5b4a988edf1f32eee58e8146c7065fa75f9d7b8 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_8b506d23d4071c32cc04a0b8b5b4a988edf1f32eee58e8146c7065fa75f9d7b8->enter($__internal_8b506d23d4071c32cc04a0b8b5b4a988edf1f32eee58e8146c7065fa75f9d7b8_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_ebfec4ab7cbe4a85740a6f90a43ee72ba4717ff78d7e7ca25ccb29767f36f1d1 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_ebfec4ab7cbe4a85740a6f90a43ee72ba4717ff78d7e7ca25ccb29767f36f1d1->enter($__internal_ebfec4ab7cbe4a85740a6f90a43ee72ba4717ff78d7e7ca25ccb29767f36f1d1_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 214
+        // line 93
         echo "    <!-- Bootstrap core JavaScript
             ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src=\"";
-        // line 218
+        // line 97
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("bundles/app/js/ie10-viewport-bug-workaround.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 219
+        // line 98
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("bundles/app/js/bootstrap.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 220
+        // line 99
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("bundles/app/js/jquery-3.2.1.slim.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 221
+        // line 100
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("bundles/app/js/popper.min.js"), "html", null, true);
         echo "\"></script>
 ";
         
-        $__internal_8b506d23d4071c32cc04a0b8b5b4a988edf1f32eee58e8146c7065fa75f9d7b8->leave($__internal_8b506d23d4071c32cc04a0b8b5b4a988edf1f32eee58e8146c7065fa75f9d7b8_prof);
+        $__internal_ebfec4ab7cbe4a85740a6f90a43ee72ba4717ff78d7e7ca25ccb29767f36f1d1->leave($__internal_ebfec4ab7cbe4a85740a6f90a43ee72ba4717ff78d7e7ca25ccb29767f36f1d1_prof);
 
         
-        $__internal_9a79c928b1d3725c23d830c98dc1efd1fd05fe9ce9fb2ca5c51466024a453f7d->leave($__internal_9a79c928b1d3725c23d830c98dc1efd1fd05fe9ce9fb2ca5c51466024a453f7d_prof);
+        $__internal_1e8dec43a14499f8aa7dd2c9c5bc7164afa92db388ab802ce32ffa61c54c7859->leave($__internal_1e8dec43a14499f8aa7dd2c9c5bc7164afa92db388ab802ce32ffa61c54c7859_prof);
 
     }
 
@@ -398,7 +280,7 @@ class __TwigTemplate_9abeb2b5168e44668ad7ac38d6fa8be5b8dc2e69bf17ef78daf225fc53c
 
     public function getDebugInfo()
     {
-        return array (  378 => 221,  374 => 220,  370 => 219,  366 => 218,  360 => 214,  351 => 213,  188 => 55,  179 => 54,  166 => 209,  164 => 54,  152 => 45,  143 => 39,  137 => 36,  119 => 21,  111 => 18,  100 => 10,  97 => 9,  88 => 8,  76 => 6,  71 => 5,  62 => 4,  44 => 3,  11 => 1,);
+        return array (  260 => 100,  256 => 99,  252 => 98,  248 => 97,  242 => 93,  233 => 92,  191 => 55,  182 => 54,  169 => 88,  167 => 54,  158 => 48,  152 => 45,  143 => 39,  137 => 36,  119 => 21,  111 => 18,  100 => 10,  97 => 9,  88 => 8,  76 => 6,  71 => 5,  62 => 4,  44 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -458,7 +340,7 @@ class __TwigTemplate_9abeb2b5168e44668ad7ac38d6fa8be5b8dc2e69bf17ef78daf225fc53c
                         <a class=\"nav-link\" href=\"{{ path('new-article') }}\">New Article</a>
                     </li>
                     <li class=\"nav-item\">
-                        <a class=\"nav-link\" href=\"#\">Article List</a>
+                        <a class=\"nav-link\" href=\"{{ path('list-article') }}\">Article List</a>
                     </li>
                 </ul>
             </nav>
@@ -468,38 +350,24 @@ class __TwigTemplate_9abeb2b5168e44668ad7ac38d6fa8be5b8dc2e69bf17ef78daf225fc53c
                 <h1>Dashboard</h1>
 
                 <section class=\"row text-center placeholders\">
-                    <div class=\"col-6 col-sm-3 placeholder\">
+                    <div class=\"col-12 col-sm-6 placeholder\">
                         <img src=\"data:image/gif;base64,R0lGODlhAQABAIABAAJ12AAAACwAAAAAAQABAAACAkQBADs=\" width=\"200\" height=\"200\" class=\"img-fluid rounded-circle\" alt=\"Generic placeholder thumbnail\">
-                        <h4>Label</h4>
-                        <div class=\"text-muted\">Something else</div>
+                        <h4>Articles</h4>
                     </div>
-                    <div class=\"col-6 col-sm-3 placeholder\">
+                    <div class=\"col-12 col-sm-6 placeholder\">
                         <img src=\"data:image/gif;base64,R0lGODlhAQABAIABAADcgwAAACwAAAAAAQABAAACAkQBADs=\" width=\"200\" height=\"200\" class=\"img-fluid rounded-circle\" alt=\"Generic placeholder thumbnail\">
-                        <h4>Label</h4>
-                        <span class=\"text-muted\">Something else</span>
-                    </div>
-                    <div class=\"col-6 col-sm-3 placeholder\">
-                        <img src=\"data:image/gif;base64,R0lGODlhAQABAIABAAJ12AAAACwAAAAAAQABAAACAkQBADs=\" width=\"200\" height=\"200\" class=\"img-fluid rounded-circle\" alt=\"Generic placeholder thumbnail\">
-                        <h4>Label</h4>
-                        <span class=\"text-muted\">Something else</span>
-                    </div>
-                    <div class=\"col-6 col-sm-3 placeholder\">
-                        <img src=\"data:image/gif;base64,R0lGODlhAQABAIABAADcgwAAACwAAAAAAQABAAACAkQBADs=\" width=\"200\" height=\"200\" class=\"img-fluid rounded-circle\" alt=\"Generic placeholder thumbnail\">
-                        <h4>Label</h4>
-                        <span class=\"text-muted\">Something else</span>
+                        <h4>Users</h4>
                     </div>
                 </section>
 
-                <h2>Section title</h2>
+                <h2>Summary</h2>
                 <div class=\"table-responsive\">
                     <table class=\"table table-striped\">
                         <thead>
                         <tr>
                             <th>#</th>
-                            <th>Header</th>
-                            <th>Header</th>
-                            <th>Header</th>
-                            <th>Header</th>
+                            <th>Name</th>
+                            <th>Total</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -507,113 +375,6 @@ class __TwigTemplate_9abeb2b5168e44668ad7ac38d6fa8be5b8dc2e69bf17ef78daf225fc53c
                             <td>1,001</td>
                             <td>Lorem</td>
                             <td>ipsum</td>
-                            <td>dolor</td>
-                            <td>sit</td>
-                        </tr>
-                        <tr>
-                            <td>1,002</td>
-                            <td>amet</td>
-                            <td>consectetur</td>
-                            <td>adipiscing</td>
-                            <td>elit</td>
-                        </tr>
-                        <tr>
-                            <td>1,003</td>
-                            <td>Integer</td>
-                            <td>nec</td>
-                            <td>odio</td>
-                            <td>Praesent</td>
-                        </tr>
-                        <tr>
-                            <td>1,003</td>
-                            <td>libero</td>
-                            <td>Sed</td>
-                            <td>cursus</td>
-                            <td>ante</td>
-                        </tr>
-                        <tr>
-                            <td>1,004</td>
-                            <td>dapibus</td>
-                            <td>diam</td>
-                            <td>Sed</td>
-                            <td>nisi</td>
-                        </tr>
-                        <tr>
-                            <td>1,005</td>
-                            <td>Nulla</td>
-                            <td>quis</td>
-                            <td>sem</td>
-                            <td>at</td>
-                        </tr>
-                        <tr>
-                            <td>1,006</td>
-                            <td>nibh</td>
-                            <td>elementum</td>
-                            <td>imperdiet</td>
-                            <td>Duis</td>
-                        </tr>
-                        <tr>
-                            <td>1,007</td>
-                            <td>sagittis</td>
-                            <td>ipsum</td>
-                            <td>Praesent</td>
-                            <td>mauris</td>
-                        </tr>
-                        <tr>
-                            <td>1,008</td>
-                            <td>Fusce</td>
-                            <td>nec</td>
-                            <td>tellus</td>
-                            <td>sed</td>
-                        </tr>
-                        <tr>
-                            <td>1,009</td>
-                            <td>augue</td>
-                            <td>semper</td>
-                            <td>porta</td>
-                            <td>Mauris</td>
-                        </tr>
-                        <tr>
-                            <td>1,010</td>
-                            <td>massa</td>
-                            <td>Vestibulum</td>
-                            <td>lacinia</td>
-                            <td>arcu</td>
-                        </tr>
-                        <tr>
-                            <td>1,011</td>
-                            <td>eget</td>
-                            <td>nulla</td>
-                            <td>Class</td>
-                            <td>aptent</td>
-                        </tr>
-                        <tr>
-                            <td>1,012</td>
-                            <td>taciti</td>
-                            <td>sociosqu</td>
-                            <td>ad</td>
-                            <td>litora</td>
-                        </tr>
-                        <tr>
-                            <td>1,013</td>
-                            <td>torquent</td>
-                            <td>per</td>
-                            <td>conubia</td>
-                            <td>nostra</td>
-                        </tr>
-                        <tr>
-                            <td>1,014</td>
-                            <td>per</td>
-                            <td>inceptos</td>
-                            <td>himenaeos</td>
-                            <td>Curabitur</td>
-                        </tr>
-                        <tr>
-                            <td>1,015</td>
-                            <td>sodales</td>
-                            <td>ligula</td>
-                            <td>in</td>
-                            <td>libero</td>
                         </tr>
                         </tbody>
                     </table>

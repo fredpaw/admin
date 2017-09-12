@@ -14,8 +14,12 @@ class DefaultController extends Controller
             return $this->redirectToRoute('login');
         }
 
+        $repository = $this->getDoctrine()->getRepository('AppBundle:Page');
+        $query = $this->getEntityManager();
 
-
-        return $this->render('AppBundle:default:index.html.twig');
+        $U_total = $query->getResult();
+        return $this->render('AppBundle:default:index.html.twig', array(
+            'U_total' => $U_total
+        ));
     }
 }
