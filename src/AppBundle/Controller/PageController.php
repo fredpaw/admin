@@ -11,14 +11,22 @@ use Doctrine\ORM\EntityManagerInterface;
 
 class PageController extends Controller
 {
-    public function indexAction()
+    public function indexAction(Request $request)
     {
+        if(!$request->getSession()->get('user_id')){
+            return $this->redirectToRoute('login');
+        }
+
+        $em = $this->getDoctrine()->getManager();
+        $repo = $em->getRepository('AppBundle:Page');
+        $articles = $repo->findAll();
+
         return $this->render('AppBundle:Page:index.html.twig', array(
-            // ...
+            'articles' => $articles
         ));
     }
 
-    public function newAction(Request $request, $id = null)
+    public function newAction(Request $request)
     {
         if(!$request->getSession()->get('user_id')){
             return $this->redirectToRoute('login');
@@ -77,11 +85,18 @@ class PageController extends Controller
         ));
     }
 
-    public function deleteAction()
+    public function deleteAction(Request $request, $id)
     {
-        return $this->render('AppBundle:Page:delete.html.twig', array(
-            // ...
-        ));
+        if(!$request->getSession()->get('user_id')){
+            return $this->redirectToRoute('login');
+        }
+
+        $em = $this->getDoctrine()->getManager();
+        $article = $em->getRepository('AppBundle:Page')->find($id);
+        $em->remove($article);
+        $em->flush();
+
+        return $this->redirectToRoute('list-article');
     }
 
 }

@@ -147,5 +147,63 @@ class Page
     {
         return $this->user;
     }
-}
+    /**
+     * @var string
+     * @Assert\Type("string")
+     */
+    private $title;
 
+    /**
+     * @var \AppBundle\Entity\Page
+     */
+    private $parent;
+
+
+    /**
+     * Set title
+     *
+     * @param string $title
+     *
+     * @return Page
+     */
+    public function setTitle($title)
+    {
+        $this->title = $title;
+    
+        return $this;
+    }
+
+    /**
+     * Get title
+     *
+     * @return string
+     */
+    public function getTitle()
+    {
+        return $this->title;
+    }
+
+    /**
+     * Set parent
+     *
+     * @param \AppBundle\Entity\Page $parent
+     *
+     * @return Page
+     */
+    public function setParent(\AppBundle\Entity\Page $parent = null)
+    {
+        $this->parent = $parent;
+    
+        return $this;
+    }
+
+    /**
+     * Get parent
+     *
+     * @return \AppBundle\Entity\Page
+     */
+    public function getParent()
+    {
+        return $this->parent;
+    }
+}

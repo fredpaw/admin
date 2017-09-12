@@ -1,7 +1,30 @@
-{% extends "::base.html.twig" %}
+{% extends "@App/default/index.html.twig" %}
 
-{% block title %}AppBundle:Page:index{% endblock %}
-
-{% block body %}
-<h1>Welcome to the Page:index page</h1>
+{% block title %}Article List{% endblock %}
+{% block content %}
+    <h2>Section title</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Publish Date</th>
+                <th>Action</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for article in articles %}
+            <tr>
+                <td>{{ article.id }}</td>
+                <td>{{ article.title }}</td>
+                <td>{{ article.user.username }}</td>
+                <td>{{ article.CreateDate | date('d-m-Y') }}</td>
+                <td><a href="{{ path('edit-article', {'id': article.id}) }}">Edit</a><a style="margin-left:20px;" href="{{ path('delete-article', {'id': article.id}) }}">Delete</a></td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
 {% endblock %}

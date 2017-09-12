@@ -13,6 +13,9 @@ class DefaultController extends Controller
         if(!$session->get('user_id')) {
             return $this->redirectToRoute('login');
         }
+
+
+
         return $this->render('AppBundle:default:index.html.twig');
     }
 }

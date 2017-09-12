@@ -29,5 +29,7 @@ new-article:
     defaults: { _controller: AppBundle:Page:new }
 
 delete-article:
-    path:     /article/delete
+    path:     /article/delete/{id}
     defaults: { _controller: AppBundle:Page:delete }
+    requirements:
+        page: '\d+'

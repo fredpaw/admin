@@ -13,6 +13,10 @@
             {{ form_errors(form) }}
         </div>
         <div class="form-group">
+            {{ form_label(form.title) }}
+            {{ form_widget(form.title, {'attr': {'class':'form-control', 'placeholder':'Please enter the title'}}) }}
+        </div>
+        <div class="form-group">
             {{ form_label(form.route) }}
             {{ form_widget(form.route, {'attr': {'class':'form-control', 'placeholder':'Please enter route for the page'}}) }}
         </div>

@@ -149,8 +149,8 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
             }
 
             // delete-article
-            if ('/article/delete' === $pathinfo) {
-                return array (  '_controller' => 'AppBundle\\Controller\\PageController::deleteAction',  '_route' => 'delete-article',);
+            if (0 === strpos($pathinfo, '/article/delete') && preg_match('#^/article/delete/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'delete-article')), array (  '_controller' => 'AppBundle\\Controller\\PageController::deleteAction',));
             }
 
         }
