@@ -11,11 +11,6 @@ class DefaultController extends Controller
 {
     public function indexAction(Request $request)
     {
-        $session = $request->getSession();
-        if(!$session->get('user_id')) {
-            return $this->redirectToRoute('login');
-        }
-
         $repository_T = $this->getDoctrine()->getRepository(Page::class);
 
         $repository_U = $this->getDoctrine()->getRepository(User::class);

@@ -13,10 +13,6 @@ class PageController extends Controller
 {
     public function indexAction(Request $request)
     {
-        if(!$request->getSession()->get('user_id')){
-            return $this->redirectToRoute('login');
-        }
-
         $em = $this->getDoctrine()->getManager();
         $repo = $em->getRepository('AppBundle:Page');
         $articles = $repo->findAll();
@@ -28,10 +24,6 @@ class PageController extends Controller
 
     public function newAction(Request $request)
     {
-        if(!$request->getSession()->get('user_id')){
-            return $this->redirectToRoute('login');
-        }
-
         $article = new Page();
         $form = $this->createForm(PageType::class, $article);
         $form->add('save', SubmitType::class);
@@ -62,10 +54,6 @@ class PageController extends Controller
 
     public function editAction(Request $request, $id)
     {
-        if(!$request->getSession()->get('user_id')){
-            return $this->redirectToRoute('login');
-        }
-
         $article = $this->getDoctrine()->getRepository('AppBundle:Page')->find($id);
 
         $form = $this->createForm(PageType::class, $article);
@@ -87,10 +75,6 @@ class PageController extends Controller
 
     public function deleteAction(Request $request, $id)
     {
-        if(!$request->getSession()->get('user_id')){
-            return $this->redirectToRoute('login');
-        }
-
         $em = $this->getDoctrine()->getManager();
         $article = $em->getRepository('AppBundle:Page')->find($id);
         $em->remove($article);

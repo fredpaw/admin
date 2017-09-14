@@ -119,12 +119,12 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
         // login
         if ('/login' === $pathinfo) {
-            return array (  '_controller' => 'AppBundle\\Controller\\UserController::loginAction',  '_route' => 'login',);
+            return array (  '_controller' => 'AppBundle\\Controller\\SecurityController::loginAction',  '_route' => 'login',);
         }
 
         // logout
         if ('/logout' === $pathinfo) {
-            return array (  '_controller' => 'AppBundle\\Controller\\UserController::logoutAction',  '_route' => 'logout',);
+            return array('_route' => 'logout');
         }
 
         // password
