@@ -14,7 +14,7 @@
             <p>Notice: {{ msg }}</p>
         {% endif %}
         {{ form_errors(form) }}
-        <p>Username: {{ app.session.get('user_name') }}</p>
+        <p>Username: {{ app.user.username }}</p>
         {{ form_label(form.newPassword,'New Password') }}
         {{ form_widget(form.newPassword, {'attr':{'class':'form-control', 'placeholder':'New Password'}}) }}
         {{ form_label(form.confirmPassword,'Confirm Password') }}

@@ -9,7 +9,7 @@ use Symfony\Component\HttpFoundation\Request;
 
 class DefaultController extends Controller
 {
-    public function indexAction(Request $request)
+    public function indexAction()
     {
         $repository_T = $this->getDoctrine()->getRepository(Page::class);
 
@@ -22,7 +22,6 @@ class DefaultController extends Controller
         $T_total = $qdt->getOneOrNullResult();
 
         $U_total = $qdu->getOneOrNullResult();
-
 
         return $this->render('AppBundle:default:index.html.twig', array(
             'T_total' => $T_total,

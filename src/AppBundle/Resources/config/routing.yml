@@ -32,3 +32,13 @@ delete-article:
     defaults: { _controller: AppBundle:Page:delete }
     requirements:
         page: '\d+'
+
+send:
+    path: /article/get/{id}
+    defaults: { _controller: AppBundle:Send:send }
+    requirements:
+        page: '\d+'
+
+send-all:
+    path: /article/get
+    defaults: { _controller: AppBundle:Send:sendAll }

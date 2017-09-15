@@ -32,7 +32,7 @@ class UserController extends Controller
                 $form->addError(new FormError('Password is not match'));
             } else {
                 $em = $this->getDoctrine()->getManager();
-                $user = $em->getRepository('AppBundle:User')->findOneBy();
+                $user = $this->getUser();
                 $encoded = $encoder->encodePassword($user, $data['newPassword']);
                 $user->setPassword($encoded);
                 $em->flush();

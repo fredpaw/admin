@@ -34,7 +34,7 @@ class PageController extends Controller
             $article = $form->getData();
             $em = $this->getDoctrine()->getManager();
 
-            $user = $em->getRepository('AppBundle:User')->find($request->getSession()->get('user_id'));
+            $user = $this->getUser();
             $article->setUser($user);
             $article->setCreateDate(new \DateTime('now', new \DateTimeZone('Australia/Sydney')));
             $em->persist($article);
