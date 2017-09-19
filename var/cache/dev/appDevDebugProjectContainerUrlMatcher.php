@@ -153,6 +153,19 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
                 return $this->mergeDefaults(array_replace($matches, array('_route' => 'delete-article')), array (  '_controller' => 'AppBundle\\Controller\\PageController::deleteAction',));
             }
 
+            if (0 === strpos($pathinfo, '/article/get')) {
+                // send
+                if (preg_match('#^/article/get/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                    return $this->mergeDefaults(array_replace($matches, array('_route' => 'send')), array (  '_controller' => 'AppBundle\\Controller\\SendController::sendAction',));
+                }
+
+                // send-all
+                if ('/article/get' === $pathinfo) {
+                    return array (  '_controller' => 'AppBundle\\Controller\\SendController::sendAllAction',  '_route' => 'send-all',);
+                }
+
+            }
+
         }
 
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();

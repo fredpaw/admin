@@ -64,10 +64,10 @@ class User extends \AppBundle\Entity\User implements \Doctrine\ORM\Proxy\Proxy
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return ['__isInitialized__', '' . "\0" . 'AppBundle\\Entity\\User' . "\0" . 'id', '' . "\0" . 'AppBundle\\Entity\\User' . "\0" . 'username', '' . "\0" . 'AppBundle\\Entity\\User' . "\0" . 'password', '' . "\0" . 'AppBundle\\Entity\\User' . "\0" . 'createdDate'];
+            return ['__isInitialized__', '' . "\0" . 'AppBundle\\Entity\\User' . "\0" . 'id', '' . "\0" . 'AppBundle\\Entity\\User' . "\0" . 'username', '' . "\0" . 'AppBundle\\Entity\\User' . "\0" . 'password', '' . "\0" . 'AppBundle\\Entity\\User' . "\0" . 'email', '' . "\0" . 'AppBundle\\Entity\\User' . "\0" . 'isActive'];
         }
 
-        return ['__isInitialized__', '' . "\0" . 'AppBundle\\Entity\\User' . "\0" . 'id', '' . "\0" . 'AppBundle\\Entity\\User' . "\0" . 'username', '' . "\0" . 'AppBundle\\Entity\\User' . "\0" . 'password', '' . "\0" . 'AppBundle\\Entity\\User' . "\0" . 'createdDate'];
+        return ['__isInitialized__', '' . "\0" . 'AppBundle\\Entity\\User' . "\0" . 'id', '' . "\0" . 'AppBundle\\Entity\\User' . "\0" . 'username', '' . "\0" . 'AppBundle\\Entity\\User' . "\0" . 'password', '' . "\0" . 'AppBundle\\Entity\\User' . "\0" . 'email', '' . "\0" . 'AppBundle\\Entity\\User' . "\0" . 'isActive'];
     }
 
     /**
@@ -176,16 +176,12 @@ class User extends \AppBundle\Entity\User implements \Doctrine\ORM\Proxy\Proxy
     /**
      * {@inheritDoc}
      */
-    public function getId()
+    public function getUsername()
     {
-        if ($this->__isInitialized__ === false) {
-            return (int)  parent::getId();
-        }
 
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getUsername', []);
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getId', []);
-
-        return parent::getId();
+        return parent::getUsername();
     }
 
     /**
@@ -202,23 +198,12 @@ class User extends \AppBundle\Entity\User implements \Doctrine\ORM\Proxy\Proxy
     /**
      * {@inheritDoc}
      */
-    public function getUsername()
+    public function getSalt()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getUsername', []);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getSalt', []);
 
-        return parent::getUsername();
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function setPassword($password)
-    {
-
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setPassword', [$password]);
-
-        return parent::setPassword($password);
+        return parent::getSalt();
     }
 
     /**
@@ -235,23 +220,100 @@ class User extends \AppBundle\Entity\User implements \Doctrine\ORM\Proxy\Proxy
     /**
      * {@inheritDoc}
      */
-    public function setCreatedDate($createdDate)
+    public function setPassword($password)
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setCreatedDate', [$createdDate]);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setPassword', [$password]);
 
-        return parent::setCreatedDate($createdDate);
+        return parent::setPassword($password);
     }
 
     /**
      * {@inheritDoc}
      */
-    public function getCreatedDate()
+    public function getEmail()
     {
 
-        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getCreatedDate', []);
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getEmail', []);
 
-        return parent::getCreatedDate();
+        return parent::getEmail();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setEmail($email)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setEmail', [$email]);
+
+        return parent::setEmail($email);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getIsActive()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getIsActive', []);
+
+        return parent::getIsActive();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setIsActive($isactive)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setIsActive', [$isactive]);
+
+        return parent::setIsActive($isactive);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getRoles()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getRoles', []);
+
+        return parent::getRoles();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function eraseCredentials()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'eraseCredentials', []);
+
+        return parent::eraseCredentials();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function serialize()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'serialize', []);
+
+        return parent::serialize();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function unserialize($serialized)
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'unserialize', [$serialized]);
+
+        return parent::unserialize($serialized);
     }
 
 }
