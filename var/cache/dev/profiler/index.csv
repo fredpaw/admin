@@ -55,3 +55,8 @@ ee949e,::1,GET,http://localhost/admin/web/article/get,1505799827,2a97ad,200
 46c045,::1,GET,http://localhost/admin/web/article/get,1505799860,7cdd58,200
 7cdd58,::1,GET,http://localhost/admin/web/article/get,1505799860,,500
 2abd5d,::1,GET,http://localhost/admin/web/article/get,1505799888,,200
+66981b,::1,GET,http://localhost/admin/web/,1505808274,,302
+7fc93b,::1,GET,http://localhost/admin/web/login,1505808275,,200
+efb873,::1,GET,http://localhost/admin/web/login,1505808345,,200
+34015e,::1,GET,http://localhost/admin/web/login,1505808379,,200
+7566ad,::1,GET,http://localhost/admin/web/login,1505808443,,200
