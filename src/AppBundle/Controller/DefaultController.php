@@ -15,9 +15,9 @@ class DefaultController extends Controller
 
         $repository_U = $this->getDoctrine()->getRepository(User::class);
 
-        $qdt = $repository_T->createQueryBuilder('t')->select('Count(p)')->from('AppBundle:Page','p')->getQuery();
+        $qdt = $repository_T->createQueryBuilder('a')->select('Count(a)')->getQuery();
 
-        $qdu = $repository_U->createQueryBuilder('n')->select('Count(u)')->from('AppBundle:User','u')->getQuery();
+        $qdu = $repository_U->createQueryBuilder('n')->select('Count(n)')->getQuery();
 
         $T_total = $qdt->getOneOrNullResult();
 
